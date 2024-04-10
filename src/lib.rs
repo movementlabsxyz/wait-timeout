@@ -38,7 +38,8 @@ use std::io;
 use std::process::{Child, ExitStatus};
 use std::time::Duration;
 
-#[cfg(unix)]
+
+#[cfg(not(windows)]
 #[path = "unix.rs"]
 mod imp;
 #[cfg(windows)]
